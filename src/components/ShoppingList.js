@@ -22,7 +22,13 @@ class ShoppingList extends React.Component {
             <option value="Dairy">Dairy</option>
             <option value="Dessert">Dessert</option>
           </select>
-        </div></div>
+        </div>
+        <ul className="Items">
+          {itemsToDisplay.map((item) => (
+            <Item key={item.id} name={item.name} category={item.category} />
+          ))}
+        </ul>
+        </div>
       );
   
 }}
